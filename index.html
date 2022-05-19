@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinoptik</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    
+</head>
+<body>
+       <p class="b"><img src="sinoptik.png" alt="icon"></p>
+       <p class="b" id="a"> 
+         <label for="city">City name: </label>
+         <input type="search" id="city" placeholder="назва населеного пункту"></input>
+         <button class="button" id="send">Search</button></p>
+                        
+        <p class="text2" id="time"></p>
+        <p class="text1" id="mes1"></p>
+
+   <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'one')" id="defaultOpen">Погода на поточний час</button>
+    <button class="tablinks" onclick="openCity(event, 'two')">Погода на п'ять днів</button>
+    <button class="tablinks" onclick="openCity(event, 'three')">Погода на десять днів</button>
+  </div>
+  
+  <div id="one" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        <table >
+      <tr>
+          <td>
+             <ul>
+             <li>Хмарність :</li>
+             <li>Температура, °C:</li>
+             <li>Тиск, мм :</li>
+             <li>Вологість, % :</li>
+             <li>Вітер, м/сек :</li>
+             </ul>
+          </td>
+          <td>
+            <ul>
+              <li><span id="cloud"></span></li>
+              <li><span id="temp"></span></li>
+              <li><span id="pressure"></span></li>
+              <li><span id="humidity"></span></li>
+              <li><span id="windspeed"></span></li>
+            </ul>         
+          </td>
+    </table>    
+  </div>
+  
+  <div id="two" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <h3>Missing content</h3>
+    <p>Data will be later.</p> 
+  </div>
+  
+  <div id="three" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <h3>Missing content</h3>
+    <p>Data will be later.</p>
+  </div>
+   
+  <p class="text1" id="mes2"></p>
+
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://cdn.js.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+   <script src="bootstrap.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>
